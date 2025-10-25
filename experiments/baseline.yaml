@@ -1,0 +1,24 @@
+# Baseline Omega Simulation Configuration
+
+experiment_name: "baseline_omega"
+seed: 42
+output_dir: "results"
+
+cluster:
+  num_machines: 100
+  heterogeneous: true
+
+schedulers:
+  - id: "batch_scheduler"
+    type: "batch"
+  
+  - id: "service_scheduler"
+    type: "service"
+    decision_time_job: 1.0
+    decision_time_task: 0.05
+
+simulation:
+  duration: 3600  # 1 hour in seconds
+
+workload:
+  batch_ratio: 0.8  # 80% batch jobs, 20% service jobs

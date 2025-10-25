@@ -1,0 +1,28 @@
+# MapReduce Scheduler Experiment Configuration
+
+experiment_name: "mapreduce_opportunistic"
+seed: 42
+output_dir: "results"
+
+cluster:
+  num_machines: 200
+  heterogeneous: true
+
+schedulers:
+  - id: "batch_scheduler"
+    type: "batch"
+  
+  - id: "service_scheduler"
+    type: "service"
+    decision_time_job: 1.0
+    decision_time_task: 0.05
+  
+  - id: "mapreduce_scheduler"
+    type: "mapreduce"
+    policy: "max_parallelism"  # or "global_cap", "relative_job_size"
+
+simulation:
+  duration: 3600  # 1 hour
+
+workload:
+  batch_ratio: 0.7  # 70% batch, 30% service

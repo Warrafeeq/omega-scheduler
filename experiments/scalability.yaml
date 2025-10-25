@@ -1,0 +1,35 @@
+# Scalability Experiment Configuration
+
+experiment_name: "scalability_test"
+seed: 42
+output_dir: "results"
+
+cluster:
+  num_machines: 500  # Large cluster
+  heterogeneous: true
+
+schedulers:
+  # Multiple batch schedulers for load balancing
+  - id: "batch_scheduler_1"
+    type: "batch"
+  
+  - id: "batch_scheduler_2"
+    type: "batch"
+  
+  - id: "batch_scheduler_3"
+    type: "batch"
+  
+  - id: "batch_scheduler_4"
+    type: "batch"
+  
+  # Single service scheduler
+  - id: "service_scheduler"
+    type: "service"
+    decision_time_job: 2.0
+    decision_time_task: 0.1
+
+simulation:
+  duration: 7200  # 2 hours
+
+workload:
+  batch_ratio: 0.85  # Higher batch load
