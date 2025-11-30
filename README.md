@@ -63,7 +63,7 @@ Optimistic Concurrency Control:
 
  Core Components
 
-```
+
 
                     Cell State                           
   (Shared cluster state with optimistic concurrency)    
@@ -85,7 +85,7 @@ Optimistic Concurrency Control:
  - Fast          - Sophistic     - Opportun   
  - Best-fit      - Anti-aff      - Data-loc   
     
-```
+
 
  1. Cell State Manager (`src/core/cell_state.py`)
 
@@ -153,7 +153,7 @@ Generates realistic workloads based on Google cluster traces:
 
 The magic happens in `commit_transaction()`:
 
-```python
+python
 def commit_transaction(self, transaction, incremental=True):
      1. Check each placement for conflicts
     for task, machine_id in transaction.placements:
@@ -175,7 +175,7 @@ def commit_transaction(self, transaction, incremental=True):
         machine.version += 1   Bump version
     
     return success, conflicts
-```
+
 
 Key Points:
 - Lock-free reads (schedulers get snapshots)
@@ -261,7 +261,7 @@ Experiments Conducted:
 
  Simulation Parameters
 
-```yaml
+yaml
  experiments/baseline.yaml
 cluster:
   num_machines: 100
@@ -278,7 +278,7 @@ simulation:
 
 workload:
   batch_ratio: 0.8   80% batch, 20% service
-```
+
 
  Evaluation Approach
 
@@ -449,23 +449,23 @@ In production with 10+ schedulers and higher load, we'd expect 5-15% conflict ra
 
  Installation
 
-```bash
+bash
  Clone repository
 git clone https://github.com/Warrafeeq/omega-scheduler.git
 cd omega-scheduler
 
  Install dependencies
 pip install -r requirements.txt
-```
+
 
  Run Baseline Simulation
 
-```bash
+bash
 python src/main.py --config experiments/baseline.yaml
-```
+
 
 Output:
-```
+
 ============================================================
 Omega Cluster Scheduler Simulation
 ============================================================
@@ -479,13 +479,13 @@ CPU: 95.10%
 Conflict rate: 0.0000
 
 Results saved to: results/results_baseline_omega.json
-```
+
 
  Generate Visualizations
 
-```bash
+bash
 python src/visualization/generate_plots.py
-```
+
 
 Generates:
 - `omega_performance_analysis.png`
@@ -495,15 +495,15 @@ Generates:
 
  Run Comparative Experiments
 
-```bash
+bash
 python src/experiments/compare_schedulers.py
-```
+
 
 Compares Omega vs Monolithic vs Two-Level schedulers.
 
  View Results
 
-```bash
+bash
  Windows
 start results\omega_performance_analysis.png
 
@@ -512,13 +512,13 @@ open results/omega_performance_analysis.png
 
  View JSON data
 cat results/results_baseline_omega.json
-```
+
 
 
 
  Project Structure
 
-```
+
 omega-scheduler/
  src/
     core/
@@ -564,7 +564,7 @@ omega-scheduler/
  PROJECT_REPORT.md                   Comprehensive report
  RESULTS_SUMMARY.md                  Quick results summary
  START_HERE.md                       Getting started guide
-```
+
 
 
 
