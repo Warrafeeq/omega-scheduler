@@ -8,24 +8,23 @@ from core.cell_state import CellState, Job, Task, Transaction, Machine
 
 
 class BatchScheduler(BaseScheduler):
-    """
-    Optimized scheduler for batch workloads.
-    Uses fast heuristics and minimal decision time.
-    """
+    # batch scheduler - handles short lived jobs quickly
+    # uses best fit strategy by default
     
     def __init__(self, scheduler_id: str, cell_state: CellState):
-        # Fast decision times for batch jobs
+        # fast decision times for batch jobs
         super().__init__(
             scheduler_id=scheduler_id,
             cell_state=cell_state,
             decision_time_per_job=0.01,  # 10ms per job
             decision_time_per_task=0.001  # 1ms per task
         )
-        self.placement_strategy = 'best_fit'  # or 'first_fit', 'worst_fit'
+        self.placement_strategy = 'best_fit'  # TODO: make this configurable from yaml?
     
     def schedule_job(self, job: Job, snapshot: CellState) -> Optional[Transaction]:
-        """Schedule batch job with fast placement"""
+        # schedule the job - try to place all tasks
         transaction = Transaction(self.scheduler_id)
+        # print(f"Scheduling job {job.id} with {len(job.tasks)} tasks")  # debug
         
         # Simulate fast decision time
         time.sleep(self.decision_time_per_job + 
@@ -52,9 +51,9 @@ class BatchScheduler(BaseScheduler):
         return transaction if transaction.placements else None
     
     def select_machine(self, task: Task, snapshot: CellState) -> Optional[Machine]:
-        """Select machine using best-fit strategy"""
+        # find best machine for this task
         best_machine = None
-        best_score = float('inf')
+        best_score = float('inf')  # lower is better for best-fit
         
         for machine in snapshot.machines.values():
             if not machine.can_fit(task.cpu_req, task.gpu_req, task.memory_req):

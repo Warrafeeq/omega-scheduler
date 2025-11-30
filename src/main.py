@@ -18,14 +18,15 @@ from workload.workload_generator import WorkloadGenerator
 
 
 def load_config(config_path: str) -> dict:
-    """Load configuration from YAML file"""
+    # load the yaml config file
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
 
 def setup_cluster(config: dict) -> CellState:
-    """Initialize cluster state"""
+    # setup the cluster with machines
     cell_state = CellState()
+    # print("DEBUG: Setting up cluster...")  # TODO: remove this later
     
     # Generate or load cluster configuration
     workload_gen = WorkloadGenerator(seed=config.get('seed', 42))
@@ -40,6 +41,7 @@ def setup_cluster(config: dict) -> CellState:
         cell_state.add_machine(machine)
     
     print(f"Initialized cluster with {len(machines)} machines")
+    # FIXME: maybe add validation here to check if machines are valid?
     return cell_state
 
 
@@ -81,8 +83,9 @@ def setup_schedulers(config: dict, cell_state: CellState) -> list:
 
 
 def generate_workload(config: dict, cell_state: CellState, schedulers: list):
-    """Generate workload and assign to schedulers"""
+    # generate jobs for the simulation
     workload_gen = WorkloadGenerator(seed=config.get('seed', 42))
+    # print(f"DEBUG: workload_gen created with seed {config.get('seed', 42)}")
     
     # Generate jobs
     duration = config['simulation']['duration']
@@ -92,7 +95,7 @@ def generate_workload(config: dict, cell_state: CellState, schedulers: list):
     
     print(f"Generated {len(jobs)} jobs")
     
-    # Assign jobs to schedulers
+    # assign jobs to the right schedulers based on type
     scheduler_map = {s.scheduler_id: s for s in schedulers}
     job_assignments = []
     
