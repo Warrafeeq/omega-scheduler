@@ -1,4 +1,4 @@
-# 📊 View Omega Scheduler Results
+#  View Omega Scheduler Results
 
 ## Quick Access to All Results
 
@@ -6,7 +6,7 @@ This document provides quick links to all generated results, visualizations, and
 
 ---
 
-## 🎯 Start Here
+##  Start Here
 
 **New to this project?** Read these in order:
 1. `COMPLETION_SUMMARY.md` - What was accomplished
@@ -15,7 +15,7 @@ This document provides quick links to all generated results, visualizations, and
 
 ---
 
-## 📈 Visualizations
+##  Visualizations
 
 All visualizations are in the `results/` folder:
 
@@ -72,7 +72,7 @@ All visualizations are in the `results/` folder:
 
 ---
 
-## 📊 Raw Data
+##  Raw Data
 
 **File**: `results/results_baseline_omega.json`
 
@@ -114,7 +114,7 @@ Contains complete simulation data:
 
 ---
 
-## 📄 Documentation
+##  Documentation
 
 ### Quick Reference
 - **RESULTS_SUMMARY.md** - 5-minute read, key findings
@@ -134,16 +134,16 @@ Contains complete simulation data:
 
 ---
 
-## 🔑 Key Findings Summary
+##  Key Findings Summary
 
 ### Performance Metrics
 | Metric | Value | Rating |
 |--------|-------|--------|
-| CPU Utilization | 95.1% | ⭐⭐⭐⭐⭐ Excellent |
-| GPU Utilization | 75.0% | ⭐⭐⭐⭐ Good |
-| Memory Utilization | 84.0% | ⭐⭐⭐⭐⭐ Excellent |
-| Conflict Rate | 0.0% | ⭐⭐⭐⭐⭐ Perfect |
-| Avg Wait Time | 0.05s | ⭐⭐⭐⭐⭐ Excellent |
+| CPU Utilization | 95.1% |  Excellent |
+| GPU Utilization | 75.0% |  Good |
+| Memory Utilization | 84.0% |  Excellent |
+| Conflict Rate | 0.0% |  Perfect |
+| Avg Wait Time | 0.05s |  Excellent |
 
 ### Comparative Performance
 | Scheduler | Throughput | Wait Time | Scalability |
@@ -153,15 +153,15 @@ Contains complete simulation data:
 | **Omega** | **92 jobs/min** | **2.1s** | **Excellent** |
 
 ### Key Achievements
-✅ **Zero conflicts** - Optimistic concurrency works perfectly
-✅ **95% CPU utilization** - Excellent resource efficiency
-✅ **41% throughput improvement** - Over monolithic schedulers
-✅ **Near-linear scaling** - Up to 2,000 machines
-✅ **Parallel schedulers** - Multiple specialized schedulers working together
+ **Zero conflicts** - Optimistic concurrency works perfectly
+ **95% CPU utilization** - Excellent resource efficiency
+ **41% throughput improvement** - Over monolithic schedulers
+ **Near-linear scaling** - Up to 2,000 machines
+ **Parallel schedulers** - Multiple specialized schedulers working together
 
 ---
 
-## 🎨 How to View Visualizations
+##  How to View Visualizations
 
 ### On Windows
 ```bash
@@ -186,7 +186,7 @@ Navigate to the `results/` folder and double-click each PNG file.
 
 ---
 
-## 📖 Reading Order
+##  Reading Order
 
 ### For Quick Overview (5 minutes)
 1. This document (VIEW_RESULTS.md)
@@ -208,7 +208,7 @@ Navigate to the `results/` folder and double-click each PNG file.
 
 ---
 
-## 🔬 Technical Details
+##  Technical Details
 
 ### Simulation Configuration
 - **Cluster**: 100 heterogeneous machines
@@ -231,7 +231,7 @@ Navigate to the `results/` folder and double-click each PNG file.
 
 ---
 
-## 🚀 Next Steps
+##  Next Steps
 
 ### To Regenerate Results
 ```bash
@@ -255,7 +255,7 @@ python src/experiments/compare_schedulers.py
 
 ---
 
-## 📞 Questions?
+##  Questions?
 
 Refer to:
 - **Technical questions**: PROJECT_REPORT.md (Section 4-5)
@@ -265,7 +265,7 @@ Refer to:
 
 ---
 
-## ✅ Checklist
+##  Checklist
 
 Use this to verify you've reviewed everything:
 
@@ -288,4 +288,4 @@ Use this to verify you've reviewed everything:
 **Documentation**: Comprehensive and professional
 **Data**: Complete and validated
 
-Enjoy exploring the Omega scheduler results! 🎉
+Enjoy exploring the Omega scheduler results! 

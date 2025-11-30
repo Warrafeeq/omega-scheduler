@@ -438,49 +438,49 @@ The Omega architecture represents a significant advancement in cluster schedulin
 
 ```
 Omega/
-├── src/
-│   ├── core/
-│   │   ├── __init__.py
-│   │   └── cell_state.py          # Shared state with OCC
-│   ├── schedulers/
-│   │   ├── __init__.py
-│   │   ├── base_scheduler.py      # Abstract scheduler
-│   │   ├── batch_scheduler.py     # Fast batch scheduler
-│   │   ├── service_scheduler.py   # Sophisticated service scheduler
-│   │   └── mapreduce_scheduler.py # MapReduce scheduler
-│   ├── simulation/
-│   │   ├── __init__.py
-│   │   └── simulator.py           # Discrete-event simulator
-│   ├── workload/
-│   │   ├── __init__.py
-│   │   └── workload_generator.py  # Realistic workload generation
-│   ├── visualization/
-│   │   ├── plot_results.py
-│   │   └── generate_plots.py      # Comprehensive visualizations
-│   ├── experiments/
-│   │   └── compare_schedulers.py  # Comparative experiments
-│   └── main.py                    # Main entry point
-├── experiments/
-│   ├── baseline.yaml              # Baseline configuration
-│   ├── scalability.yaml
-│   ├── fault_tolerance.yaml
-│   └── mapreduce.yaml
-├── results/
-│   ├── results_baseline_omega.json
-│   ├── omega_performance_analysis.png
-│   ├── scheduler_comparison.png
-│   ├── scalability_analysis.png
-│   └── workload_characteristics.png
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── DIAGRAMS.md
-│   └── RESEARCH_REPORT.md
-├── tests/
-│   └── test_cell_state.py
-├── README.md
-├── PROJECT_REPORT.md              # This report
-├── requirements.txt
-└── .gitignore
+ src/
+    core/
+       __init__.py
+       cell_state.py          # Shared state with OCC
+    schedulers/
+       __init__.py
+       base_scheduler.py      # Abstract scheduler
+       batch_scheduler.py     # Fast batch scheduler
+       service_scheduler.py   # Sophisticated service scheduler
+       mapreduce_scheduler.py # MapReduce scheduler
+    simulation/
+       __init__.py
+       simulator.py           # Discrete-event simulator
+    workload/
+       __init__.py
+       workload_generator.py  # Realistic workload generation
+    visualization/
+       plot_results.py
+       generate_plots.py      # Comprehensive visualizations
+    experiments/
+       compare_schedulers.py  # Comparative experiments
+    main.py                    # Main entry point
+ experiments/
+    baseline.yaml              # Baseline configuration
+    scalability.yaml
+    fault_tolerance.yaml
+    mapreduce.yaml
+ results/
+    results_baseline_omega.json
+    omega_performance_analysis.png
+    scheduler_comparison.png
+    scalability_analysis.png
+    workload_characteristics.png
+ docs/
+    ARCHITECTURE.md
+    DIAGRAMS.md
+    RESEARCH_REPORT.md
+ tests/
+    test_cell_state.py
+ README.md
+ PROJECT_REPORT.md              # This report
+ requirements.txt
+ .gitignore
 ```
 
 ---

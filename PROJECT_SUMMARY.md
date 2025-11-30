@@ -8,57 +8,57 @@ This is a complete research and simulation project implementing **Omega: Flexibl
 
 ```
 Omega/
-├── README.md                          # Project overview and introduction
-├── QUICKSTART.md                      # Quick start guide for users
-├── PROJECT_SUMMARY.md                 # This file
-├── requirements.txt                   # Python dependencies
-│
-├── src/                               # Source code
-│   ├── __init__.py
-│   ├── main.py                        # Main simulation entry point
-│   │
-│   ├── core/                          # Core scheduling engine
-│   │   ├── __init__.py
-│   │   └── cell_state.py              # Shared state with optimistic concurrency
-│   │
-│   ├── schedulers/                    # Scheduler implementations
-│   │   ├── __init__.py
-│   │   ├── base_scheduler.py         # Abstract scheduler interface
-│   │   ├── batch_scheduler.py        # Fast batch job scheduler
-│   │   ├── service_scheduler.py      # Sophisticated service scheduler
-│   │   └── mapreduce_scheduler.py    # Opportunistic MapReduce scheduler
-│   │
-│   ├── simulation/                    # Discrete-event simulator
-│   │   ├── __init__.py
-│   │   └── simulator.py              # SimPy-based event simulator
-│   │
-│   ├── workload/                      # Workload generation
-│   │   ├── __init__.py
-│   │   └── workload_generator.py     # Realistic workload synthesis
-│   │
-│   ├── experiments/                   # Experimental framework
-│   │   └── compare_schedulers.py     # Comparative experiments
-│   │
-│   └── visualization/                 # Plotting and analysis
-│       └── plot_results.py           # Result visualization
-│
-├── experiments/                       # Experiment configurations
-│   ├── baseline.yaml                 # Baseline Omega configuration
-│   ├── scalability.yaml              # Scalability tests
-│   ├── mapreduce.yaml                # MapReduce scheduler tests
-│   └── fault_tolerance.yaml          # Fault tolerance tests
-│
-├── docs/                             # Documentation
-│   ├── ARCHITECTURE.md               # Detailed architecture design
-│   └── RESEARCH_REPORT.md            # Complete research report
-│
-├── tests/                            # Unit tests
-│   └── test_cell_state.py           # Cell state tests
-│
-└── results/                          # Output directory (created at runtime)
-    ├── *.json                        # Simulation results
-    ├── *.png                         # Plots and visualizations
-    └── *.txt                         # Summary reports
+ README.md                          # Project overview and introduction
+ QUICKSTART.md                      # Quick start guide for users
+ PROJECT_SUMMARY.md                 # This file
+ requirements.txt                   # Python dependencies
+
+ src/                               # Source code
+    __init__.py
+    main.py                        # Main simulation entry point
+   
+    core/                          # Core scheduling engine
+       __init__.py
+       cell_state.py              # Shared state with optimistic concurrency
+   
+    schedulers/                    # Scheduler implementations
+       __init__.py
+       base_scheduler.py         # Abstract scheduler interface
+       batch_scheduler.py        # Fast batch job scheduler
+       service_scheduler.py      # Sophisticated service scheduler
+       mapreduce_scheduler.py    # Opportunistic MapReduce scheduler
+   
+    simulation/                    # Discrete-event simulator
+       __init__.py
+       simulator.py              # SimPy-based event simulator
+   
+    workload/                      # Workload generation
+       __init__.py
+       workload_generator.py     # Realistic workload synthesis
+   
+    experiments/                   # Experimental framework
+       compare_schedulers.py     # Comparative experiments
+   
+    visualization/                 # Plotting and analysis
+        plot_results.py           # Result visualization
+
+ experiments/                       # Experiment configurations
+    baseline.yaml                 # Baseline Omega configuration
+    scalability.yaml              # Scalability tests
+    mapreduce.yaml                # MapReduce scheduler tests
+    fault_tolerance.yaml          # Fault tolerance tests
+
+ docs/                             # Documentation
+    ARCHITECTURE.md               # Detailed architecture design
+    RESEARCH_REPORT.md            # Complete research report
+
+ tests/                            # Unit tests
+    test_cell_state.py           # Cell state tests
+
+ results/                          # Output directory (created at runtime)
+     *.json                        # Simulation results
+     *.png                         # Plots and visualizations
+     *.txt                         # Summary reports
 ```
 
 ## Key Components
@@ -164,20 +164,20 @@ Features:
 
 ## Key Features Implemented
 
-### ✅ Architecture Design
+###  Architecture Design
 - Shared-state architecture with optimistic concurrency
 - Multiple parallel schedulers
 - Pluggable scheduling policies
 - Component interaction diagrams (in docs)
 
-### ✅ Simulation Model
+###  Simulation Model
 - Discrete-event simulation with SimPy
 - Resource heterogeneity (CPU, GPU, memory)
 - Realistic job arrival patterns
 - Inter-task dependencies (DAG support)
 - Multi-tenant scenarios
 
-### ✅ Scheduling Algorithms
+###  Scheduling Algorithms
 - FIFO (baseline)
 - Dominant Resource Fairness (DRF)
 - Weighted Round Robin
@@ -185,34 +185,34 @@ Features:
 - Omega's optimistic scheduler
 - Dynamic policy switching
 
-### ✅ Scalability & Fault Tolerance
+###  Scalability & Fault Tolerance
 - Horizontal scheduler scaling
 - Load balancing across schedulers
 - Machine failure simulation
 - Automatic task rescheduling
 - Checkpoint/restart support
 
-### ✅ Evaluation Metrics
+###  Evaluation Metrics
 - Throughput (jobs/time)
 - Latency (wait time, completion time)
 - Fairness (resource allocation)
 - Utilization (CPU, GPU, memory)
 - Resilience (conflict rate, failure recovery)
 
-### ✅ Comparative Experiments
+###  Comparative Experiments
 - Omega vs Monolithic vs Two-Level
 - Performance trends and plots
 - Statistical analysis
 - Clear result presentation
 
-### ✅ Implementation & Tools
+###  Implementation & Tools
 - Python + SimPy framework
 - Modular code structure
 - Configuration-driven experiments
 - Reproducible results
 - Comprehensive testing
 
-### ✅ Documentation & Deliverables
+###  Documentation & Deliverables
 - Research report with methodology and results
 - Architecture documentation
 - Annotated codebase
@@ -332,16 +332,16 @@ The project has been validated through:
 
 ## Deliverables Checklist
 
-✅ Architecture design with component diagrams
-✅ Simulation model with realistic workloads
-✅ Multiple scheduling algorithms implemented
-✅ Scalability and fault-tolerance mechanisms
-✅ Comprehensive evaluation metrics
-✅ Comparative experiments with plots
-✅ Modular, documented codebase
-✅ Configuration-driven experiments
-✅ Research report with results
-✅ Visual dashboards and plots
+ Architecture design with component diagrams
+ Simulation model with realistic workloads
+ Multiple scheduling algorithms implemented
+ Scalability and fault-tolerance mechanisms
+ Comprehensive evaluation metrics
+ Comparative experiments with plots
+ Modular, documented codebase
+ Configuration-driven experiments
+ Research report with results
+ Visual dashboards and plots
 
 ## Conclusion
 

@@ -1,38 +1,38 @@
-# 🚀 START HERE - Omega Cluster Scheduler Project
+#  START HERE - Omega Cluster Scheduler Project
 
 Welcome! This document will guide you through the completed Omega scheduler project.
 
 ---
 
-## ✅ Project Status: COMPLETE
+##  Project Status: COMPLETE
 
 All simulations have been run, visualizations generated, and comprehensive documentation created.
 
 ---
 
-## 📋 What You Have
+##  What You Have
 
-### 🎯 Results & Visualizations
-✅ **4 Publication-Quality Visualizations** (300 DPI)
+###  Results & Visualizations
+ **4 Publication-Quality Visualizations** (300 DPI)
 - Performance analysis dashboard
 - Scheduler architecture comparison  
 - Scalability analysis
 - Workload characteristics
 
-✅ **Complete Simulation Data**
+ **Complete Simulation Data**
 - JSON results file with all metrics
 - 125 transactions processed
 - 0% conflict rate achieved
 - 95% CPU utilization
 
-### 📚 Documentation
-✅ **Comprehensive Project Report** (3,500+ words)
-✅ **Results Summary** (Quick reference)
-✅ **Completion Summary** (Deliverables checklist)
-✅ **View Results Guide** (How to access everything)
+###  Documentation
+ **Comprehensive Project Report** (3,500+ words)
+ **Results Summary** (Quick reference)
+ **Completion Summary** (Deliverables checklist)
+ **View Results Guide** (How to access everything)
 
-### 💻 Working Code
-✅ **Full Implementation**
+###  Working Code
+ **Full Implementation**
 - Optimistic concurrency control
 - Multiple parallel schedulers
 - Discrete-event simulation
@@ -40,7 +40,7 @@ All simulations have been run, visualizations generated, and comprehensive docum
 
 ---
 
-## 🎯 Quick Start - Choose Your Path
+##  Quick Start - Choose Your Path
 
 ### Path 1: Just Show Me The Results (2 minutes)
 1. Open `VIEW_RESULTS.md`
@@ -80,7 +80,7 @@ python src/visualization/generate_plots.py
 
 ---
 
-## 🏆 Key Achievements
+##  Key Achievements
 
 ### Performance Results
 - **95.1% CPU Utilization** - Excellent resource efficiency
@@ -96,16 +96,16 @@ python src/visualization/generate_plots.py
 
 ---
 
-## 📁 File Guide
+##  File Guide
 
-### 🎯 Start With These
+###  Start With These
 | File | Purpose | Time |
 |------|---------|------|
 | **START_HERE.md** | This file - your guide | 2 min |
 | **VIEW_RESULTS.md** | How to access all results | 3 min |
 | **RESULTS_SUMMARY.md** | Key findings & metrics | 5 min |
 
-### 📊 Results & Visualizations
+###  Results & Visualizations
 | File | Content |
 |------|---------|
 | `results/omega_performance_analysis.png` | Main dashboard (9 panels) |
@@ -114,7 +114,7 @@ python src/visualization/generate_plots.py
 | `results/workload_characteristics.png` | Workload properties |
 | `results/results_baseline_omega.json` | Raw simulation data |
 
-### 📖 Documentation
+###  Documentation
 | File | Purpose | Length |
 |------|---------|--------|
 | **PROJECT_REPORT.md** | Complete technical report | 3,500 words |
@@ -123,7 +123,7 @@ python src/visualization/generate_plots.py
 | **README.md** | Project overview | 500 words |
 | **QUICKSTART.md** | How to run | 300 words |
 
-### 💻 Source Code
+###  Source Code
 | Directory | Contents |
 |-----------|----------|
 | `src/core/` | Cell state & optimistic concurrency |
@@ -135,7 +135,7 @@ python src/visualization/generate_plots.py
 
 ---
 
-## 🎨 Visualization Preview
+##  Visualization Preview
 
 ### 1. Performance Analysis Dashboard
 Shows 9 key metrics:
@@ -149,12 +149,12 @@ Shows 9 key metrics:
 Compares 3 architectures:
 - Monolithic: 65 jobs/min, 8.5s wait
 - Two-Level: 78 jobs/min, 5.2s wait
-- **Omega: 92 jobs/min, 2.1s wait** ⭐
+- **Omega: 92 jobs/min, 2.1s wait** 
 
 ### 3. Scalability Analysis
 Performance from 50 to 2,000 machines:
-- Throughput: 45 → 1,720 jobs/min (near-linear!)
-- Conflicts: 2% → 18% (manageable)
+- Throughput: 45 -> 1,720 jobs/min (near-linear!)
+- Conflicts: 2% -> 18% (manageable)
 - Utilization: >90% maintained
 
 ### 4. Workload Characteristics
@@ -166,7 +166,7 @@ Realistic workload simulation:
 
 ---
 
-## 📊 Key Metrics Summary
+##  Key Metrics Summary
 
 ```
 SIMULATION RESULTS
@@ -179,11 +179,11 @@ Tasks Scheduled:    1,458
 
 PERFORMANCE
 ===========
-CPU Utilization:    95.1%  ⭐⭐⭐⭐⭐
-GPU Utilization:    75.0%  ⭐⭐⭐⭐
-Memory Utilization: 84.0%  ⭐⭐⭐⭐⭐
-Conflict Rate:      0.0%   ⭐⭐⭐⭐⭐
-Avg Wait Time:      0.05s  ⭐⭐⭐⭐⭐
+CPU Utilization:    95.1%  
+GPU Utilization:    75.0%  
+Memory Utilization: 84.0%  
+Conflict Rate:      0.0%   
+Avg Wait Time:      0.05s  
 
 SCHEDULERS
 ==========
@@ -195,33 +195,33 @@ Successful Commits: 125 (100%)
 
 ---
 
-## 🎓 What This Demonstrates
+##  What This Demonstrates
 
 ### Technical Skills
-✅ Distributed systems design
-✅ Optimistic concurrency control
-✅ Discrete-event simulation
-✅ Performance analysis
-✅ Data visualization
-✅ Technical writing
+ Distributed systems design
+ Optimistic concurrency control
+ Discrete-event simulation
+ Performance analysis
+ Data visualization
+ Technical writing
 
 ### Research Skills
-✅ Literature review (Omega paper)
-✅ Experimental design
-✅ Comparative evaluation
-✅ Statistical analysis
-✅ Publication-quality results
+ Literature review (Omega paper)
+ Experimental design
+ Comparative evaluation
+ Statistical analysis
+ Publication-quality results
 
 ### Software Engineering
-✅ Clean architecture
-✅ Modular design
-✅ Comprehensive testing
-✅ Professional documentation
-✅ Version control ready
+ Clean architecture
+ Modular design
+ Comprehensive testing
+ Professional documentation
+ Version control ready
 
 ---
 
-## 🚀 Next Actions
+##  Next Actions
 
 ### To View Results
 ```bash
@@ -259,26 +259,26 @@ python src/experiments/compare_schedulers.py
 
 ---
 
-## 📞 Need Help?
+##  Need Help?
 
 ### Understanding Results
-→ Read `RESULTS_SUMMARY.md`
+-> Read `RESULTS_SUMMARY.md`
 
 ### Technical Details
-→ Read `PROJECT_REPORT.md` (Section 4-5)
+-> Read `PROJECT_REPORT.md` (Section 4-5)
 
 ### How to Run
-→ Read `QUICKSTART.md`
+-> Read `QUICKSTART.md`
 
 ### Implementation Details
-→ Browse `src/` directory
+-> Browse `src/` directory
 
 ### Configuration
-→ Check `experiments/baseline.yaml`
+-> Check `experiments/baseline.yaml`
 
 ---
 
-## ✅ Verification Checklist
+##  Verification Checklist
 
 Before presenting or submitting, verify:
 
@@ -290,21 +290,21 @@ Before presenting or submitting, verify:
 - [x] Code is clean and documented
 - [x] Ready for presentation
 
-**Status**: ✅ ALL COMPLETE
+**Status**:  ALL COMPLETE
 
 ---
 
-## 🎉 Summary
+##  Summary
 
 You have a **complete, professional, publication-ready** Omega scheduler project including:
 
-✅ Working simulation with realistic workloads
-✅ 4 high-quality visualizations
-✅ Comprehensive technical report
-✅ Excellent performance results (95% CPU, 0% conflicts)
-✅ Comparative analysis showing 41% improvement
-✅ Scalability validation up to 2,000 machines
-✅ Professional documentation
+ Working simulation with realistic workloads
+ 4 high-quality visualizations
+ Comprehensive technical report
+ Excellent performance results (95% CPU, 0% conflicts)
+ Comparative analysis showing 41% improvement
+ Scalability validation up to 2,000 machines
+ Professional documentation
 
 **Everything is ready for:**
 - Academic presentations
@@ -316,7 +316,7 @@ You have a **complete, professional, publication-ready** Omega scheduler project
 
 ---
 
-## 🎯 Recommended Reading Order
+##  Recommended Reading Order
 
 1. **START_HERE.md** (this file) - 2 minutes
 2. **VIEW_RESULTS.md** - 3 minutes
@@ -328,7 +328,7 @@ You have a **complete, professional, publication-ready** Omega scheduler project
 
 ---
 
-**Ready to explore? Start with VIEW_RESULTS.md!** 🚀
+**Ready to explore? Start with VIEW_RESULTS.md!** 
 
 ---
 

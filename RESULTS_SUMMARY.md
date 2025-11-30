@@ -226,6 +226,6 @@ To explore further:
 
 ---
 
-**Project Status**: ✅ Complete
+**Project Status**:  Complete
 
 All simulations run successfully, visualizations generated, and comprehensive documentation provided.

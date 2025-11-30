@@ -225,12 +225,12 @@ Based on Google cluster traces:
 
 ### 5.2 Scalability Analysis
 
-**Cluster Size Scaling** (50 → 1000 machines):
+**Cluster Size Scaling** (50 -> 1000 machines):
 - Throughput scales near-linearly
-- Conflict rate increases sub-linearly (5% → 25%)
+- Conflict rate increases sub-linearly (5% -> 25%)
 - Wait time remains stable
 
-**Scheduler Count Scaling** (1 → 32 batch schedulers):
+**Scheduler Count Scaling** (1 -> 32 batch schedulers):
 - Throughput scales up to 8 schedulers
 - Diminishing returns beyond 16 schedulers
 - Conflict rate increases but remains manageable

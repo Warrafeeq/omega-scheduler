@@ -9,8 +9,8 @@
       "tasks_scheduled": 1245,
       "conflicts": 0,
       "conflict_rate": 0.0,
-      "total_decision_time": 17.04934549331665,
-      "busy_time": 46.33302092552185,
+      "total_decision_time": 17.344550132751465,
+      "busy_time": 130.7124741077423,
       "avg_wait_time": 0.052101494362281245
     },
     "service_scheduler": {
@@ -19,8 +19,8 @@
       "tasks_scheduled": 213,
       "conflicts": 0,
       "conflict_rate": 0.0,
-      "total_decision_time": 183.05020308494568,
-      "busy_time": 171.40181803703308,
+      "total_decision_time": 183.27088451385498,
+      "busy_time": 185.8019037246704,
       "avg_wait_time": 0.04927150827688131
     }
   },

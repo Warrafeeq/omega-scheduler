@@ -5,20 +5,20 @@
 
 ---
 
-## ✅ Deliverable Checklist
+##  Deliverable Checklist
 
-### 1. Architecture Design ✅
+### 1. Architecture Design 
 
 **Files**:
 - `docs/ARCHITECTURE.md` - Comprehensive architecture documentation
 - `docs/DIAGRAMS.md` - Visual architecture diagrams
 
 **Contents**:
-- ✅ High-level architecture with master and worker nodes
-- ✅ Scheduling policies and coordination mechanisms
-- ✅ Flexible policy plug-ins (priority-based, fair-share, dependency-aware)
-- ✅ Logical diagrams showing component interaction
-- ✅ Comparison with monolithic and two-level architectures
+-  High-level architecture with master and worker nodes
+-  Scheduling policies and coordination mechanisms
+-  Flexible policy plug-ins (priority-based, fair-share, dependency-aware)
+-  Logical diagrams showing component interaction
+-  Comparison with monolithic and two-level architectures
 
 **Key Components Documented**:
 - Shared Cell State with optimistic concurrency control
@@ -29,7 +29,7 @@
 
 ---
 
-### 2. Simulation Model ✅
+### 2. Simulation Model 
 
 **Files**:
 - `src/simulation/simulator.py` - Discrete-event simulator
@@ -37,12 +37,12 @@
 - `src/core/cell_state.py` - Cluster state management
 
 **Features Implemented**:
-- ✅ Discrete-event simulation using SimPy
-- ✅ Resource heterogeneity (CPU, GPU, memory)
-- ✅ Realistic job arrival patterns (Poisson process)
-- ✅ Inter-task dependencies (DAG support)
-- ✅ Multi-user scenarios with varying priorities
-- ✅ Configurable cluster sizes (50-1000 machines)
+-  Discrete-event simulation using SimPy
+-  Resource heterogeneity (CPU, GPU, memory)
+-  Realistic job arrival patterns (Poisson process)
+-  Inter-task dependencies (DAG support)
+-  Multi-user scenarios with varying priorities
+-  Configurable cluster sizes (50-1000 machines)
 
 **Workload Characteristics**:
 - Batch jobs: 80%, short-lived (5min±10min)
@@ -53,7 +53,7 @@
 
 ---
 
-### 3. Scheduling Algorithms ✅
+### 3. Scheduling Algorithms 
 
 **Files**:
 - `src/schedulers/base_scheduler.py` - Base interface and FIFO
@@ -62,22 +62,22 @@
 - `src/schedulers/mapreduce_scheduler.py` - MapReduce scheduler
 
 **Algorithms Implemented**:
-- ✅ FIFO (First-In-First-Out) - Baseline
-- ✅ Dominant Resource Fairness (DRF) - Fair allocation
-- ✅ Weighted Round Robin - Fair-share scheduling
-- ✅ Priority-based scheduling - With preemption support
-- ✅ Best-fit / First-fit / Worst-fit - Resource packing strategies
-- ✅ Omega's optimistic scheduler - Shared-state approach
+-  FIFO (First-In-First-Out) - Baseline
+-  Dominant Resource Fairness (DRF) - Fair allocation
+-  Weighted Round Robin - Fair-share scheduling
+-  Priority-based scheduling - With preemption support
+-  Best-fit / First-fit / Worst-fit - Resource packing strategies
+-  Omega's optimistic scheduler - Shared-state approach
 
 **Dynamic Features**:
-- ✅ Flexible policy switching
-- ✅ Runtime scheduler addition
-- ✅ Configurable decision times
-- ✅ Incremental vs gang scheduling
+-  Flexible policy switching
+-  Runtime scheduler addition
+-  Configurable decision times
+-  Incremental vs gang scheduling
 
 ---
 
-### 4. Scalability and Fault-Tolerance ✅
+### 4. Scalability and Fault-Tolerance 
 
 **Files**:
 - `src/simulation/simulator.py` - Failure simulation
@@ -86,14 +86,14 @@
 - `experiments/fault_tolerance.yaml` - Fault tolerance tests
 
 **Mechanisms Implemented**:
-- ✅ Decentralized scheduling (multiple parallel schedulers)
-- ✅ Load balancing across schedulers
-- ✅ Horizontal scheduler scaling (1-32 schedulers tested)
-- ✅ Machine failure simulation with exponential distribution
-- ✅ Automatic task rescheduling on failure
-- ✅ Checkpoint/restart for cell state
-- ✅ Transaction log for recovery
-- ✅ Conflict detection and resolution
+-  Decentralized scheduling (multiple parallel schedulers)
+-  Load balancing across schedulers
+-  Horizontal scheduler scaling (1-32 schedulers tested)
+-  Machine failure simulation with exponential distribution
+-  Automatic task rescheduling on failure
+-  Checkpoint/restart for cell state
+-  Transaction log for recovery
+-  Conflict detection and resolution
 
 **Evaluation Results**:
 - Scales to 1000+ machines
@@ -104,7 +104,7 @@
 
 ---
 
-### 5. Evaluation Metrics and Experiments ✅
+### 5. Evaluation Metrics and Experiments 
 
 **Files**:
 - `src/experiments/compare_schedulers.py` - Comparative experiments
@@ -112,31 +112,31 @@
 - `experiments/*.yaml` - Experiment configurations
 
 **Metrics Implemented**:
-- ✅ **Throughput**: Jobs completed per unit time
-- ✅ **Latency**: Job wait time and completion time
-- ✅ **Fairness**: Resource allocation equity (DRF)
-- ✅ **Utilization**: CPU, GPU, memory efficiency
-- ✅ **Resilience**: Conflict rate, failure recovery
-- ✅ **Scalability**: Performance vs cluster size
+-  **Throughput**: Jobs completed per unit time
+-  **Latency**: Job wait time and completion time
+-  **Fairness**: Resource allocation equity (DRF)
+-  **Utilization**: CPU, GPU, memory efficiency
+-  **Resilience**: Conflict rate, failure recovery
+-  **Scalability**: Performance vs cluster size
 
 **Experiments Conducted**:
-- ✅ Baseline Omega configuration
-- ✅ Comparative analysis: Monolithic vs Two-Level vs Omega
-- ✅ Scalability tests (50-1000 machines)
-- ✅ Scheduler scaling (1-32 schedulers)
-- ✅ Fault tolerance evaluation
-- ✅ MapReduce opportunistic scheduling
+-  Baseline Omega configuration
+-  Comparative analysis: Monolithic vs Two-Level vs Omega
+-  Scalability tests (50-1000 machines)
+-  Scheduler scaling (1-32 schedulers)
+-  Fault tolerance evaluation
+-  MapReduce opportunistic scheduling
 
 **Visualization**:
-- ✅ Scheduler comparison plots
-- ✅ Performance metrics charts
-- ✅ Scalability trends
-- ✅ Resource utilization graphs
-- ✅ Conflict rate analysis
+-  Scheduler comparison plots
+-  Performance metrics charts
+-  Scalability trends
+-  Resource utilization graphs
+-  Conflict rate analysis
 
 ---
 
-### 6. Implementation & Tools ✅
+### 6. Implementation & Tools 
 
 **Framework**: Python + SimPy
 
@@ -146,12 +146,12 @@
 - All source files with modular structure
 
 **Features**:
-- ✅ Modular code structure
-- ✅ Configuration-driven experiments (YAML)
-- ✅ Reproducible results with seed control
-- ✅ Extensible scheduler framework
-- ✅ Comprehensive logging and statistics
-- ✅ Unit tests for core components
+-  Modular code structure
+-  Configuration-driven experiments (YAML)
+-  Reproducible results with seed control
+-  Extensible scheduler framework
+-  Comprehensive logging and statistics
+-  Unit tests for core components
 
 **Code Quality**:
 - Clean, well-documented code
@@ -162,7 +162,7 @@
 
 ---
 
-### 7. Documentation & Deliverables ✅
+### 7. Documentation & Deliverables 
 
 **Documentation Files**:
 - `README.md` - Project overview
@@ -174,28 +174,28 @@
 - `docs/DIAGRAMS.md` - Visual diagrams
 
 **Research Report Contents**:
-- ✅ Abstract and introduction
-- ✅ Motivation and research questions
-- ✅ Background and related work
-- ✅ Design and architecture
-- ✅ Methodology and experimental setup
-- ✅ Evaluation results with analysis
-- ✅ Discussion of findings
-- ✅ Limitations and future work
-- ✅ Conclusions
+-  Abstract and introduction
+-  Motivation and research questions
+-  Background and related work
+-  Design and architecture
+-  Methodology and experimental setup
+-  Evaluation results with analysis
+-  Discussion of findings
+-  Limitations and future work
+-  Conclusions
 
 **Code Documentation**:
-- ✅ Inline comments throughout
-- ✅ Docstrings for all classes and methods
-- ✅ Type annotations
-- ✅ README files in key directories
+-  Inline comments throughout
+-  Docstrings for all classes and methods
+-  Type annotations
+-  README files in key directories
 
 **Visual Deliverables**:
-- ✅ Architecture diagrams (text-based)
-- ✅ Component interaction flows
-- ✅ Transaction lifecycle diagrams
-- ✅ Performance comparison charts
-- ✅ Resource model visualizations
+-  Architecture diagrams (text-based)
+-  Component interaction flows
+-  Transaction lifecycle diagrams
+-  Performance comparison charts
+-  Resource model visualizations
 
 ---
 
@@ -296,12 +296,12 @@ pytest tests/ -v
 
 ## Validation
 
-✅ All requirements met
-✅ Code tested and functional
-✅ Documentation complete
-✅ Experiments reproducible
-✅ Results analyzed and visualized
-✅ Research report comprehensive
+ All requirements met
+ Code tested and functional
+ Documentation complete
+ Experiments reproducible
+ Results analyzed and visualized
+ Research report comprehensive
 
 ---
 
@@ -322,14 +322,14 @@ Potential extensions for further research:
 
 This project delivers a **complete, production-quality implementation** of the Omega cluster scheduler with:
 
-- ✅ Full architecture design and documentation
-- ✅ Working simulation with realistic workloads
-- ✅ Multiple scheduling algorithms
-- ✅ Scalability and fault-tolerance mechanisms
-- ✅ Comprehensive evaluation and comparison
-- ✅ Modular, extensible codebase
-- ✅ Detailed research report
-- ✅ Visual dashboards and plots
+-  Full architecture design and documentation
+-  Working simulation with realistic workloads
+-  Multiple scheduling algorithms
+-  Scalability and fault-tolerance mechanisms
+-  Comprehensive evaluation and comparison
+-  Modular, extensible codebase
+-  Detailed research report
+-  Visual dashboards and plots
 
 The project successfully demonstrates that Omega's shared-state approach with optimistic concurrency control is viable, scalable, and flexible for large-scale cluster scheduling.
 
@@ -347,7 +347,7 @@ For questions, issues, or contributions:
 
 ---
 
-**Project Status**: ✅ COMPLETE
+**Project Status**:  COMPLETE
 
 **Last Updated**: 2024
 

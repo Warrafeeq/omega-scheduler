@@ -7,31 +7,31 @@ Omega is a flexible, scalable cluster scheduler that uses **shared state** and *
 ## High-Level Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     Omega Architecture                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                               │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │   Batch      │  │   Service    │  │  MapReduce   │      │
-│  │  Scheduler   │  │  Scheduler   │  │  Scheduler   │      │
-│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘      │
-│         │                  │                  │              │
-│         │    Read Snapshot │                  │              │
-│         └──────────┬───────┴──────────────────┘              │
-│                    ▼                                          │
-│         ┌─────────────────────────┐                          │
-│         │   Shared Cell State     │                          │
-│         │  (Optimistic Locking)   │                          │
-│         └─────────────────────────┘                          │
-│                    │                                          │
-│         ┌──────────┴──────────┐                              │
-│         ▼                     ▼                               │
-│  ┌─────────────┐      ┌─────────────┐                       │
-│  │  Machines   │      │    Jobs     │                        │
-│  │  Resources  │      │    Tasks    │                        │
-│  └─────────────┘      └─────────────┘                       │
-│                                                               │
-└─────────────────────────────────────────────────────────────┘
+
+                     Omega Architecture                       
+
+                                                               
+            
+     Batch           Service        MapReduce         
+    Scheduler       Scheduler       Scheduler         
+            
+                                                           
+             Read Snapshot                                 
+                       
+                                                              
+                                   
+            Shared Cell State                               
+           (Optimistic Locking)                             
+                                   
+                                                              
+                                       
+                                                             
+                               
+    Machines             Jobs                             
+    Resources            Tasks                            
+                               
+                                                               
+
 ```
 
 ## Core Components
@@ -47,9 +47,9 @@ Omega is a flexible, scalable cluster scheduler that uses **shared state** and *
 - Resource utilization tracking
 
 **Data Structures**:
-- `machines`: Map of machine_id → Machine objects
-- `jobs`: Map of job_id → Job objects
-- `tasks`: Map of task_id → Task objects
+- `machines`: Map of machine_id -> Machine objects
+- `jobs`: Map of job_id -> Job objects
+- `tasks`: Map of task_id -> Task objects
 - `version`: Global state version counter
 
 **Concurrency Control**:
@@ -166,7 +166,7 @@ Dominant Resource Fairness ensures equitable allocation across multiple resource
 ### Dependency-Aware
 
 Support for DAG-structured jobs (e.g., MapReduce):
-- Map stage → Reduce stage dependencies
+- Map stage -> Reduce stage dependencies
 - Tasks scheduled respecting precedence constraints
 
 ## Fault Tolerance
