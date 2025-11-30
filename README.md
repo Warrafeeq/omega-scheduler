@@ -12,7 +12,7 @@
 9. [How to Run](how-to-run)
 10. [Project Structure](project-structure)
 
----
+
 
  Introduction
 
@@ -31,7 +31,7 @@ In modern data centers, you have different types of workloads:
 
 Each workload type has different scheduling requirements. Omega lets you run specialized schedulers for each type simultaneously, all working on the same cluster without stepping on each other's toes.
 
----
+
 
  Project Motivation
 
@@ -57,7 +57,7 @@ Optimistic Concurrency Control:
 - Conflicts are detected and resolved at commit time
 - In practice, conflicts are rare (our results show 0% conflict rate!)
 
----
+
 
  System Architecture
 
@@ -145,7 +145,7 @@ Generates realistic workloads based on Google cluster traces:
 - Resource requirements: Normal distribution with heterogeneity
 - Job types: 80% batch, 20% service (realistic mix)
 
----
+
 
  Implementation Details
 
@@ -191,7 +191,7 @@ Key Points:
 4. Commit: Try to apply changes to real state
 5. Handle Conflicts: If conflict, retry with fresh snapshot
 
----
+
 
  Dataset & Workload Generation
 
@@ -238,7 +238,7 @@ Based on real Google cluster traces published in research:
 - Poisson arrivals model independent job submissions
 - Resource requirements show natural variation
 
----
+
 
  Methodology
 
@@ -288,7 +288,7 @@ workload:
 4. Visualize: Generate publication-quality plots
 5. Compare: Benchmark against alternatives
 
----
+
 
  Experimental Setup
 
@@ -314,7 +314,7 @@ All experiments are fully reproducible:
 - Version-controlled code
 - Documented configurations
 
----
+
 
  Results & Evaluation
 
@@ -325,7 +325,7 @@ Simulation: 100 machines, 3,600 seconds, 163 jobs generated
  Key Metrics
 
 | Metric | Value | Assessment |
-|--------|-------|------------|
+|--|-||
 | CPU Utilization | 95.10% |  Excellent |
 | GPU Utilization | 75.00% |  Good |
 | Memory Utilization | 83.98% |  Excellent |
@@ -361,7 +361,7 @@ Analysis:
 Comparing Omega against traditional architectures:
 
 | Scheduler Type | Throughput (jobs/min) | Wait Time (s) | Conflict Rate | Scalability |
-|----------------|----------------------|---------------|---------------|-------------|
+|-|-|||-|
 | Monolithic | 65 | 8.5 | 0.00 | Poor |
 | Two-Level (Mesos) | 78 | 5.2 | 0.00 | Limited |
 | Omega | 92 | 2.1 | 0.08 | Excellent |
@@ -377,7 +377,7 @@ Key Findings:
 Performance across different cluster sizes:
 
 | Cluster Size | Throughput | Conflict Rate | CPU Utilization |
-|--------------|-----------|---------------|-----------------|
+|--|--||--|
 | 50 machines | 45 jobs/min | 2% | 75% |
 | 100 machines | 92 jobs/min | 5% | 82% |
 | 200 machines | 185 jobs/min | 8% | 88% |
@@ -443,7 +443,7 @@ Why Zero Conflicts?
 
 In production with 10+ schedulers and higher load, we'd expect 5-15% conflict rate (still acceptable).
 
----
+
 
  How to Run
 
@@ -514,7 +514,7 @@ open results/omega_performance_analysis.png
 cat results/results_baseline_omega.json
 ```
 
----
+
 
  Project Structure
 
@@ -566,7 +566,7 @@ omega-scheduler/
  START_HERE.md                       Getting started guide
 ```
 
----
+
 
  Key Contributions
 
@@ -576,7 +576,7 @@ omega-scheduler/
 4. Publication-Quality Visualizations: 4 detailed plots (300 DPI)
 5. Reproducible Research: All code, data, and configurations included
 
----
+
 
  Future Work
 
@@ -593,7 +593,7 @@ omega-scheduler/
 - Can ML predict and avoid conflicts?
 - How to handle adversarial workloads?
 
----
+
 
  References
 
@@ -605,13 +605,13 @@ omega-scheduler/
 
 4. Burns, B., et al. (2016). "Borg, Omega, and Kubernetes." ACM Queue, 14(1), 70-93.
 
----
+
 
  License
 
 This project is for educational and research purposes.
 
----
+
 
  Contact
 
@@ -619,7 +619,7 @@ GitHub: https://github.com/Warrafeeq/omega-scheduler
 
 Issues: Please report bugs or suggestions via GitHub Issues
 
----
+
 
  Acknowledgments
 
@@ -628,7 +628,7 @@ Issues: Please report bugs or suggestions via GitHub Issues
 - SimPy discrete-event simulation framework
 - Matplotlib/Seaborn for visualizations
 
----
+
 
 Project Status:  Complete and Validated
 
